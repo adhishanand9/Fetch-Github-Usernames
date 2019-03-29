@@ -20,9 +20,14 @@ function getUser(val){
     var array=xhr.responseText;
     user=JSON.parse(array);
     console.log(user[0]);
+	
+	if(user.id==undefined){
+		alert("Wrong Value Entered.");
+		 return;		
+	}
+  generateRows();
   };
   xhr.send();
-  generateRows();
 }
 var i=0;
 function  generateRows()

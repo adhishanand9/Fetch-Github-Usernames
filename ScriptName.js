@@ -20,6 +20,10 @@ function getUser(val){
     var array=xhr.responseText;
     console.log(array);
     user=JSON.parse(array);
+	if(user.id==undefined){
+		alert("Wrong ID Entered.");
+		 return;		
+	}
     generateRows();
   };
   xhr.send();
