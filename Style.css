@@ -1,0 +1,75 @@
+body
+{
+
+}
+table {
+  border-collapse: collapse;
+   width: 100%;
+}
+th {
+  padding: 15px;
+
+}
+td {
+  padding: 15px;
+  text-align: center;
+}
+table,th
+{
+  border:7px solid dodgerblue;
+  color:black;
+  background-color: yellow;
+  font-family: "Agency FB";
+  font-size: 35px;
+}
+td
+{
+  border:7px solid dodgerblue;
+  color:black;
+  background-color: orange;
+  font-family: "Agency FB";
+  font-size: 35px;
+  vertical-align: middle;
+}
+th {
+  height: 50px;
+}
+div
+{
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.button
+{
+  background-color: #f4511e;
+  border: none;
+  border-radius: 1px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "primetime";
+  margin: 5px 5px;
+  opacity: 1;
+  transition: 0.2s;
+  height:80px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {opacity: 0.5}
+.input{
+  background-color: lightblue;
+  border: 5px solid black;
+  border-radius: 4px;
+  font-family: "Agency FB";
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 30px;
+  margin: 2px 1px;
+  height:80px;
+}
+::placeholder{
+  color:black;
+}
