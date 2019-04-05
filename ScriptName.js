@@ -1,7 +1,7 @@
 var btn=document.getElementById('but');
 var input = document.getElementById("inp");
 var tbody = document.getElementById("parent");
-var val1;
+var val1;var ENTER_KEY_CODE = 13;
 btn.addEventListener("click",function(){
   val1 = input.value;
   if(!val1)
@@ -9,8 +9,23 @@ btn.addEventListener("click",function(){
 	   alert("No Value Entered.");
 		 return;
 	}
+	input.value="";
   getUser(val1);
 });
+input.addEventListener("keydown", function(event) 
+  {
+    if (event.keyCode === ENTER_KEY_CODE) 
+	{
+	 val1 = input.value;
+  if(!val1)
+	{
+	   alert("No Value Entered.");
+		 return;
+	}
+	input.value="";
+  getUser(val1);
+    }
+  });
 var user;
 function getUser(val){
   console.log(val);
@@ -21,7 +36,7 @@ function getUser(val){
     console.log(array);
     user=JSON.parse(array);
 	if(user.id==undefined){
-		alert("Wrong ID Entered.");
+		alert("User Does Not Exist.");
 		 return;		
 	}
     generateRows();
